@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Guess The Number</title>
+    </h:head>
+    <h:body>
+        <h1>Number Guessing Game</h1>
+        <h:form>
+            <h:panelGrid columns="2" id="numgrid" >
+                <h:outputText value="#{numberBean.betweenMessage}"></h:outputText>
+                <h:inputText id="txtguess" value="#{numberBean.userGuess}"></h:inputText>
+                <h:outputText id="outguessmessage" value="#{numberBean.guessMessage}"></h:outputText>
+                <h:commandButton id="btnguess" rendered="#{numberBean.guessVisible}"  action="#{numberBean.guess}" value="Guess Again"></h:commandButton>
+                <h:commandButton id="btnreset" rendered="#{numberBean.resetVisible}"  action="#{numberBean.guess}" value="First Guess"></h:commandButton>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
+
